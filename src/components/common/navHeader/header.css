@@ -1,0 +1,131 @@
+/* for header */
+header.ui.grid {
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background: RGBA(100, 100, 100, 0.2);
+  margin: 0;
+  z-index: 10;
+}
+header.ui.grid:hover {
+  background: RGBA(100, 100, 100, 0.6);
+}
+
+/* header icon: left */
+header > div.three.wide.column.navicon {
+  height: 100%;
+  padding: 0 0 0 2rem;
+  line-height: 5rem;
+  color: white;
+}
+header .header-icon {
+  font-size: 3.4rem;
+  float: left;
+  height: inherit;
+}
+header div.three.wide.column.navicon::after {
+  font-size: 2rem;
+  padding-left: 1rem;
+  content: 'Lucas';
+  display: block;
+  float: left;
+}
+@media (max-width: 800px) {
+  header > div.three.wide.column.navicon {
+    padding: 0;
+    font-size: 1rem;
+  }
+  header .header-icon {
+    font-size: 2rem;
+  }
+  header > div.three.wide.column.navicon::after {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* header navBar: center */
+header > div.navbar.ten.wide.column {
+  height: 100%;
+  padding: 0;
+  /* 设置行高，让其内部元素自动居中 */
+  line-height: 5rem;
+}
+header > div.navbar ul {
+  list-style: none;
+  font-size: 1.7rem;
+  margin: 0;
+}
+header > .navbar > ul > li {
+  float: left;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+header > .navbar ul a,
+header > .login-state ul a {
+  text-decoration: none;
+  display: block;
+  padding: 0 2rem;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1rem;
+}
+@media (max-width: 800px) {
+  header > .navbar > ul > li {
+    padding: 0;
+    font-size: 1.5rem;
+    width: 33%;
+  }
+  header > .navbar ul a,
+  header > .login-state ul a {
+    padding: 0;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+/* header navBar: dropdown */
+header div.other-submenu,
+header div.user-info {
+  display: none;
+  background: RGBA(100, 100, 100, 0.6);
+  margin: 0;
+}
+header div.other-submenu ul,
+header div.user-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header div.other-submenu.active,
+header div.user-info.active {
+  display: block;
+}
+header div.other-submenu li:hover,
+header div.user-info li:hover {
+  background: RGBA(100, 100, 100, 0.7);
+}
+
+/* header navBar: LoginState */
+header div.three.wide.column.login-state {
+  line-height: 5rem;
+  padding: 0;
+  text-align: center;
+  font-size: 1.7rem;
+  color: white;
+  cursor: pointer;
+}
+
+header div.three.wide.column.login-state > a {
+  color: white;
+}
+@media (max-width: 800px) {
+  header div.three.wide.column.login-state span {
+    display: block;
+    height: 5rem;
+    overflow: hidden;
+  }
+  header div.three.wide.column.login-state {
+    font-size: 1.5rem;
+  }
+}

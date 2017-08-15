@@ -1,0 +1,113 @@
+/**
+  * Project: vue-demo
+  * Author: Lucas Twilight
+  * Create Time: 2017-08-15 15:15
+  * Description:
+  */
+
+/* passage list: ul & li */
+.passage-list {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.passage-list ul {
+  position: absolute;
+  width: 70%;
+  margin: 10rem 15% 0 15%;
+  list-style: none;
+}
+.passage-list ul li {
+  background: RGBA(200, 200, 200, 0.5);
+  margin-bottom: 5rem;
+  padding: 1rem 5rem;
+}
+@media (max-width: 800px) {
+  .passage-list ul {
+    width: 100%;
+    margin: 10rem 0 0 0;
+    padding: 0;
+  }
+  .passage-list ul li {
+    width: 100%;
+  }
+}
+
+/* passage list: list content */
+
+.passage-list .passage-author {
+  line-height: 2rem;
+  font-size: 1rem;
+  height: 2rem;
+}
+.passage-list .passage-author img {
+  height: 2rem;
+  float: left;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.passage-list .passage-author div a {
+  float: left;
+  padding-left: 1rem;
+  color: black;
+  cursor: pointer;
+}
+.passage-list .passage-author div a:hover {
+  color: dimgrey;
+}
+.passage-list .passage-title {
+  line-height: 4rem;
+  font-size: 2rem;
+}
+.passage-list .passage-title span {
+  cursor: pointer;
+}
+.passage-list .passage-title span:hover {
+  cursor: pointer;
+  color: dimgrey;
+  text-shadow: 0 0 0.1px white, 0 0 0.3px white;
+}
+.passage-list .passage-summary {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+.passage-list .passage-meta {
+  color: black;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.passage-list .passage-meta span {
+  padding-left: 1rem;
+  cursor: default;
+}
+.passage-list .passage-meta span:hover {
+  color: palevioletred;
+}
+
+/* passage list: loading list item */
+.passage-list .loading-list-item {
+  background: transparent;
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+.passage-list .loading-list-item svg {
+  animation: loading-rotate 2s linear infinite;
+}
+
+@keyframes loading-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

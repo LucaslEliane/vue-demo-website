@@ -1,0 +1,19 @@
+
+
+/* home page: background and cover */
+main.home-main > .back {
+  background: url('/static/global/blog-background.jpeg') no-repeat fixed center;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+main.home-main > .back::after {
+  display: block;
+  content: '';
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: RGBA(100, 100, 100, 0.4);
+}
